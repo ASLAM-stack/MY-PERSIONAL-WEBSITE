@@ -1,0 +1,543 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu",sans-serif;
+  box-sizing: border-box;
+  position:relative;
+}
+img{max-width:100%}
+.maincontent {
+    width: 1182px;
+    margin: auto;
+    padding: 0px 0px;
+    display: table;
+    position:relative;
+    margin-left: 105px;
+}
+
+.navbar{
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  padding: 30px 0;
+  top: 0;
+  z-index: 999;
+  transition: .3s linear;
+}
+
+.inner-width{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.navbar .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo{
+  width: 44px;
+  height: 32px;
+  background-image: url(../image/white-logo.png);
+  background-size: contain;
+}
+
+.menu-toggler{
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 999;
+  display: none;
+}
+
+.menu-toggler span{
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+  transition: .3s linear;
+}
+
+.navbar-menu a{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: .2s linear;
+}
+
+.navbar-menu a:hover{
+  color: #48dbfb !important;
+}
+
+.sticky{
+  background-color: #fff;
+  padding: 18px 0;
+}
+
+.sticky .logo{
+  background-image: url(../image/black-logo.png);
+}
+
+.sticky .navbar-menu a{
+  color: #111;
+}
+
+.sticky .menu-toggler span{
+  background-color: #111;
+}
+
+#home{
+  height: 100vh;
+  min-height: 500px;
+  background: url(../image/bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#home .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+#home .content{
+  width: 100%;
+  color: #fff;
+}
+
+#home .content h1{
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+
+#home .content h1::after{
+  content: "Arif Hossain Aslam";
+  animation: textanim 10s linear infinite;
+}
+
+@keyframes textanim{
+  25%{
+    content: "A Developer";
+  }
+  50%{
+    content: "A Designer";
+  }
+  75%{
+    content: "A Youtuber";
+  }
+}
+
+.sm a{
+  color: #fff;
+  font-size: 22px;
+  margin: 0 10px;
+  transition: .2s linear;
+}
+
+.sm a:hover{
+  color: #48dbfb;
+}
+
+#home .buttons{
+  margin-top: 60px;
+}
+
+#home .buttons a{
+  display: inline-block;
+  margin: 15px 30px;
+  color: #48dbfb;
+  font-size: 15px;
+  font-weight: 500;
+  width: 180px;
+  border: 1px solid #48dbfb;
+  padding: 14px 0;
+  border-radius: 6px;
+  transition: .2s linear;
+}
+
+#home .buttons a:hover,
+#home .buttons a:nth-child(2)
+{
+  background-color: #48dbfb;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 980px){
+  .menu-toggler{
+    display: block;
+  }
+
+  .navbar-menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #353b48;
+    top: 0;
+    right: -100%;
+    max-width: 400px;
+    padding: 80px 50px;
+    transition: .3s linear;
+  }
+
+  .navbar-menu a{
+    display: block;
+    font-size: 30px;
+    margin: 30px 0;
+  }
+
+  .sticky .navbar-menu{
+    background-color: #f1f1f1;
+  }
+  
+  .navbar-menu.active{
+    right: 0;
+  }
+
+  .menu-toggler.active span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 4px;
+  }
+
+  .menu-toggler.active span:nth-child(2){
+    opacity: 0;
+  }
+
+  .menu-toggler.active span:nth-child(3){
+    transform: rotate(45deg);
+    bottom: 14px;
+  }
+}
+.service_title h2 {
+    font-size: 35px;
+    color: #191f3a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service_title {
+    padding: 30px 0px;
+}
+
+.service_title h2 span {
+    font-weight: 300;
+    color: #7f7f7f;
+}
+.sec_title_inner {
+    width: 800px;
+    text-align: center;
+    margin: auto;
+    color: #777;
+}
+
+p {
+    line-height: 25px;
+	color:#777;
+}
+.Service_boxes {
+    /* overflow: hidden; */
+    margin-top: 24px;
+}
+
+.Service_box {
+    width: 325px;
+    float: left;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+	
+}
+
+.Service_Icon {
+    width: 50px;
+    margin: auto;
+    margin-bottom: 10px;
+    transition:0.3s;
+	
+}
+
+.Service_boxinner:hover .Service_Icon {
+    transform: scale(1.2);
+}
+.Service_boxinner:hover .Service_title h4{
+    color: orange;
+}
+.Service_boxinner:hover{cursor:pointer;}
+.Service_title h4 {
+    color: #5b5b5b;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+	transition:0.3s;
+}
+.Service_boxinner {
+    padding: 10px;
+	
+}
+.about
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+.about .contentBx
+{
+    background:#162c3b;
+    padding: 100px;
+    width: 50%;
+}
+.heading
+{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.text
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.about .imgbx
+{
+    width: 50%;
+    background-image: url(../image/window.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.myContract
+{
+    margin:0;
+	padding:0;
+    font-family:'Poppins' ,sans-serif !important;
+    box-sizing: border-box;
+}
+
+.contractSec
+{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#112d42;
+	font-family:'Poppins' ,sans-serif ;
+	
+
+}
+.contractSec::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background:#03a9f4;
+}
+.contractSec .container2
+{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+}
+.contractSec .container2 .contractInfo
+{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #0f3959;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+}
+.contractSec .container2 .contractInfo h2
+{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+.contractSec .container2 .contractInfo .info
+{
+    position: relative;
+    margin: 20px 0px;
+}
+.contractSec .container2 .contractInfo .info li
+{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+.contractSec .container2 .contractInfo .info li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+}
+.contractSec .container2 .contractInfo .info li span:nth-child(1) img
+{
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+}
+.contractSec .container2 .contractInfo .info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+    opacity: 0.5;
+    font-family: 'Poppins', sans-serif;
+}
+.contractSec .container2 .contractInfo .info li:hover span:nth-child(1) img,
+.contractSec .container2 .contractInfo .info li:hover span:nth-child(2)
+{
+    opacity: 1;
+}
+.contractSec .container2 .contractInfo .sci
+{
+    position: relative;
+    display: flex;
+    margin-left: 33px;
+    margin-top: 153px;
+}
+.contractSec .container2 .contractInfo .sci li
+{
+    list-style: none;
+    margin-right: 15px;
+}
+.contractSec .container2 .contractInfo .sci li a
+{
+    text-decoration: none;
+    
+}
+.contractSec .container2 .contractInfo .sci li a i
+{
+    filter: invert(1);
+    opacity: 0.5;
+    font-size: 36px;
+}
+.contractSec .container2 .contractInfo .sci li:hover a i
+{
+    opacity: 1;
+}
+.contractSec .container2 .contratForm
+{
+    position: absolute;
+    padding: 70px 50px;
+    background: #fff;
+    margin-left: 150px;
+    padding-left: 250px;
+    width:calc(100% - 150px);
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+}
+.contractSec .container2 .contratForm h2
+{
+    color:#0f3959;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+.contractSec .container2 .contratForm .formBoxm
+{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.contractSec .container2 .contratForm .formBoxm .inputBox
+{
+    position: relative;
+    margin: 0 0 35px 0;
+
+}
+.contractSec .container2 .contratForm .formBoxm .inputBox.w50
+{
+    width: 47%;
+}
+.contractSec .container2 .contratForm .formBoxm .inputBox.w100
+{
+    width: 100%;
+}
+.contractSec .container2 .contratForm .formBoxm .inputBox input,
+.contractSec .container2 .contratForm .formBoxm .inputBox textarea
+{
+    width: 100% !important;
+    resize: none;
+    padding:5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+.contractSec .container2 .contratForm .formBoxm .inputBox textarea
+{
+    min-height: 120px;
+}
+.SuggestText
+{
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    transition: 0.3s;
+    pointer-events: none;
+    font-family: 'Poppins', sans-serif;
+}
+.contractSec .container2 .contratForm .formBoxm .inputBox input:focus ~  .SuggestText,
+.contractSec .container2 .contratForm .formBoxm .inputBox textarea:focus ~ .SuggestText ,
+.contractSec .container2 .contratForm .formBoxm .inputBox input:valid ~ .SuggestText,
+.contractSec .container2 .contratForm .formBoxm .inputBox textarea:valid ~ .SuggesText
+{
+    transform:translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ff568c;
+}
+.contractSec .container2 .contratForm .formBoxm .inputBox input[type="submit"]
+{
+    position: relative;
+    cursor: pointer;
+    background: #0f3959;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.contractSec .container2 .contratForm .formBoxm .inputBox input[type="submit"]:hover
+{
+    background: #ff568c;
+}
+
+
